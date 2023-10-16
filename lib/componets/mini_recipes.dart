@@ -16,12 +16,18 @@ class MiniRepice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 5, bottom: 5),
+      margin: const EdgeInsets.only(top: 3, bottom: 7),
       child: Stack(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: ImageMiniRecipe(height: height, img: 'assets/images/blin.jpeg',)
+          Card(
+            elevation: 5, // Устанавливаем значение для тени
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20), // Закругляем углы карты
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: ImageMiniRecipe(height: height, img: 'assets/images/blin.jpeg'),
+            ),
           ),
           Container(
             height: height * 0.09,
@@ -30,7 +36,8 @@ class MiniRepice extends StatelessWidget {
             margin: const EdgeInsets.all(15),
             decoration: const BoxDecoration(
               color: Color.fromARGB(150, 0, 130, 9),
-              borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
+              borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

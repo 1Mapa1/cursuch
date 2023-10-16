@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cursuch/pages/recipes_page.dart';
+import 'package:cursuch/pages/recipe_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,9 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter ListView',
-      home: const RecipePage(),
+      home: RecipePage(),
     );
   }
 }

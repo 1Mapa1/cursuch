@@ -17,7 +17,7 @@ class _HeartButtonState extends State<HeartButton> {
       klickheart = true;
     });
 
-    await Future.delayed(Duration(milliseconds: 300));
+    await Future.delayed(const Duration(milliseconds: 300));
 
     // Затем уменьшаем
     setState(() {
@@ -30,7 +30,7 @@ class _HeartButtonState extends State<HeartButton> {
     return Center(
         child: TweenAnimationBuilder<double>(
           tween: Tween(begin: 2, end: klickheart ? 1.2 : 1),
-          duration: Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 300),
           builder: (context, scale, child) {
             return Transform.scale(
               scale: scale,
@@ -62,7 +62,7 @@ class _HeartButtonState extends State<HeartButton> {
 }
 
 class SvgButtonBottomBar extends StatelessWidget {
-  SvgButtonBottomBar({
+  const SvgButtonBottomBar({
     super.key,
     required this.path,
     required this.height,
