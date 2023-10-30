@@ -43,7 +43,15 @@ class RecipePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.all(30),
-            child: RecipeCarouse(width: width, images: ['assets/images/blin.jpeg', 'assets/images/blin2.jpeg', 'assets/images/blin3.jpeg'],)
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0), // Указываем радиус скругления углов
+                child: Image.asset(
+                  'assets/images/blin.jpeg',
+                  fit: BoxFit.cover,
+                  width: width * 0.75,
+                ),
+              ),
+            // child: RecipeCarouse(width: width, images: ['assets/images/blin.jpeg', 'assets/images/blin2.jpeg', 'assets/images/blin3.jpeg'],)
           ),
 
           Container(
